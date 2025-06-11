@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Posts – Maheswar Reddy</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    :root {
+      --bg: #111827;
+      --card: rgba(255, 255, 255, 0.08);
+      --text: #fff;
+      --accent: #00ffe0;
+    }
+
+    body.light {
+      --bg: #f4f4f4;
+      --card: rgba(0,0,0,0.08);
+      --text: #111;
+      --accent: #4CAF50;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 2rem;
+      transition: 0.3s ease;
+    }
+
+    nav.navbar {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      backdrop-filter: blur(10px);
+      background: var(--card);
+      border-radius: 12px;
+    }
+
+    nav.navbar a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav.navbar a:hover {
+      color: var(--accent);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--accent);
+      margin-bottom: 2rem;
+      font-size: 2.2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--card);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card p {
+      padding: 1rem;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 0.6rem 1.2rem;
+      background: var(--card);
+      border: none;
+      border-radius: 10px;
+      color: var(--text);
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    }
+
+    .toggle:hover {
+      background: var(--accent);
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="patents.html">Patents</a>
+    <a href="index.html#education">Education</a>
+    <a href="contact.html">Contact Me</a>
+  </nav>
+
+  <h1>Achievements & Highlights 🏆</h1>
+
+  <div class="grid">
+    <!-- 👇 Duplicate this card block for each post -->
+    <div class="card">
+      <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1749648479/Photo3.jpg" alt="Achievement" />
+      <p>🏅 Won 1st Prize – Honored to receive the Best Paper Award in Cybersecurity — grateful for the recognition, and even more excited for what’s ahead!</p>
+    </div>
+
+    <div class="card">
+      <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1749648479/Photo1.jpg" alt="Voting System" />
+      <p>🎖️ "Prize in hand, heart full of gratitude — moments like these make the grind worth it! 🏆🎁</p>
+    </div>
+
+    <div class="card">
+      <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1749648480/prize.jpg" alt="Fire Detection" />
+      <p>🔥 Big thanks to New Horizon College — your support, guidance, and inspiration made this achievement possible!</p>
+    </div>
+  </div>
+
+  <button class="toggle" onclick="document.body.classList.toggle('light')">🌗</button>
+</body>
+</html>
