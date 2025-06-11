@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kuraparthi Maheswar Reddy</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    :root {
+      --bg-color: #10141e;
+      --card-bg: rgba(255, 255, 255, 0.08);
+      --text-color: #fff;
+      --highlight: #00ffe0;
+      --blur: blur(10px);
+    }
+
+    body.light {
+      --bg-color: #f2f2f2;
+      --card-bg: rgba(0, 0, 0, 0.06);
+      --text-color: #222;
+      --highlight: #4CAF50;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      padding: 2rem;
+      transition: background 0.5s ease, color 0.5s ease;
+      position: relative;
+    }
+
+    nav.navbar {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      backdrop-filter: var(--blur);
+      background: var(--card-bg);
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+
+    nav.navbar a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav.navbar a:hover {
+      color: var(--highlight);
+    }
+
+    .main-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .left-block {
+      flex: 1;
+      min-width: 280px;
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .left-block img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      cursor: pointer;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .left-block img:hover {
+      transform: scale(1.05);
+    }
+
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: var(--blur);
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      border-radius: 20px;
+      padding: 1.5rem;
+      width: 100%;
+      transition: background 0.5s ease;
+    }
+
+    .right-block {
+      flex: 2;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    h1, h2 {
+      color: var(--highlight);
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .toggle-mode {
+      position: fixed;
+      bottom: 515px;
+      right: 40px;
+      padding: 0.6rem 1.2rem;
+      background: var(--card-bg);
+      border: none;
+      border-radius: 10px;
+      color: var(--text-color);
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+      z-index: 999;
+    }
+
+    .toggle-mode:hover {
+      background: var(--highlight);
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      .main-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .last-update {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  color: var(--text);
+  opacity: 0.7;
+  backdrop-filter: var(--blur);
+}
+
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="projects.html">Projects</a>
+    <a href="patents.html">Patents</a>
+    <a href="#education">Education</a>
+    <a href="daily.html">Daily Updates</a>
+    <a href="contact.html">Contact Me</a>
+  </nav>
+
+  <div class="main-wrapper">
+    <div class="left-block">
+      <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1740053991/cj4q4u7w4fqkhtffg55b.png"
+        alt="Profile"
+        onclick="window.open('https://github.com/Maheshwar86', '_blank')" />
+      
+      <div class="glass-card" id="education">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>10th:</strong> ZP High School, Kallur, AP – 517113</li>
+          <li><strong>Inter (MPC):</strong> NRI Junior College, Tirupati</li>
+          <li><strong>Degree (B.Com):</strong> VRR College, Kallur, AP – 517113</li>
+          <li><strong>PG (MCA):</strong> New Horizon College of Engineering, Bangalore</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="right-block">
+      <div class="glass-card" id="about">
+        <h1>Hi Friends 👽</h1>
+        <p>I am Alien. My name is <strong>Maheswar Reddy</strong>. Welcome to my site to learn together 🚀</p>
+      </div>
+
+      <div class="glass-card">
+        <h2>Status</h2>
+        <p>👨‍🎓 <strong>Student</strong></p>
+      </div>
+
+      <div class="glass-card">
+        <h2>Announcement</h2>
+        <p>🚀 Stay tuned—big updates are coming soon!</p>
+      </div>
+    </div>
+  </div>
+
+  <button class="toggle-mode" onclick="toggleMode()">🌗</button>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light');
+    }
+    const date = new Date();
+  document.getElementById("update-date").textContent = date.toLocaleDateString('en-IN', {
+    year: 'numeric', month: 'long', day: 'numeric'
+  });
+  </script>
+  <footer class="last-update">
+    Last Update: 11/06/2025 <span id="update-date"></span>
+  </footer>  
+</body>
+</html>

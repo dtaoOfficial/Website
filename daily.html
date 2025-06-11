@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily Updates – Maheswar Reddy</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:wght@300;600&display=swap');
+
+    :root {
+      --bg: #0e101a;
+      --panel: rgba(255,255,255,0.06);
+      --text: #e0e0e0;
+      --highlight: #00ffe0;
+    }
+
+    body.light {
+      --bg: #f4f4f4;
+      --panel: rgba(0,0,0,0.08);
+      --text: #111;
+      --highlight: #4CAF50;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Fira Code', monospace;
+      background: var(--bg);
+      color: var(--text);
+      transition: 0.4s ease;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    nav.navbar {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background: var(--panel);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+    }
+
+    nav.navbar a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav.navbar a:hover {
+      color: var(--highlight);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--highlight);
+      margin-bottom: 2rem;
+    }
+
+    .entry {
+      background: var(--panel);
+      border-left: 4px solid var(--highlight);
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .entry h2 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      color: var(--highlight);
+    }
+
+    .entry p {
+      white-space: pre-wrap;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 0.6rem 1.2rem;
+      background: var(--panel);
+      border: none;
+      color: var(--text);
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+    }
+
+    .toggle:hover {
+      background: var(--highlight);
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="patents.html">Patents</a>
+    <a href="index.html#education">Education</a>
+    <a href="contact.html">Contact Me</a>
+  </nav>
+
+  <h1>Maheswar’s Daily Dev Log 🚀</h1>
+
+  <!-- ✍️ Add your daily updates below -->
+  <div class="entry">
+    <h2>🗓 July 11, 2025</h2>
+    <p>
+• Finished Contact Page with animations 🔥  
+• Learned how to use GitHub Pages + Netlify for hosting  
+• Explored dark/light toggle and UI components  
+• Idea: create a full-stack Amazon-like project next? 😎  
+    </p>
+  </div>
+
+  <div class="entry">
+    <h2>🗓 July 10, 2025</h2>
+    <p>
+• Polished Patents and Projects page layouts  
+• Embedded flip cards and hover animations  
+• Added Last Update footer to home page  
+    </p>
+  </div>
+
+  <!-- ⬇️ You can duplicate this .entry block to add more daily logs -->
+
+  <button class="toggle" onclick="toggleTheme()">🌗 Toggle Mode</button>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+    }
+  </script>
+</body>
+</html>

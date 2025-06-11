@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me – Maheswar Reddy</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    :root {
+      --bg: #0f172a;
+      --card: rgba(255,255,255,0.08);
+      --text: #fff;
+      --highlight: #00ffe0;
+      --blur: blur(10px);
+    }
+
+    body.light {
+      --bg: #f9f9f9;
+      --card: rgba(0,0,0,0.05);
+      --text: #222;
+      --highlight: #4CAF50;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: 0.4s ease;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    nav.navbar {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+      padding: 1rem;
+      backdrop-filter: var(--blur);
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    nav.navbar a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav.navbar a:hover {
+      color: var(--highlight);
+    }
+
+    .contact-card {
+      max-width: 700px;
+      width: 100%;
+      background: var(--card);
+      backdrop-filter: var(--blur);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      text-align: center;
+      animation: popIn 1s ease forwards;
+    }
+
+    .contact-card img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+
+    .contact-card h1 {
+      color: var(--highlight);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-card p {
+      margin-bottom: 1.5rem;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .links a {
+      padding: 0.8rem 1.2rem;
+      border-radius: 10px;
+      background: var(--highlight);
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .links a:hover {
+      transform: translateY(-5px) scale(1.03);
+      background: #fff;
+      color: #000;
+    }
+
+    .toggle-mode {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 0.6rem 1.2rem;
+      background: var(--card);
+      border: none;
+      border-radius: 10px;
+      color: var(--text);
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+      z-index: 999;
+    }
+
+    .toggle-mode:hover {
+      background: var(--highlight);
+      color: #000;
+    }
+
+    @keyframes popIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="patents.html">Patents</a>
+    <a href="daily.html">Daily Updates</a>
+    <a href="index.html#education">Education</a>
+  </nav>
+
+  <div class="contact-card">
+    <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1740053991/cj4q4u7w4fqkhtffg55b.png" alt="Maheswar"/>
+    <h1>Let’s Connect!</h1>
+    <p>We can learn, build, and create something amazing together 💡</p>
+    <div class="links">
+      <a href="https://chat.whatsapp.com/EhPmtNXQ2II4V6Sa4y2prR" target="_blank">WhatsApp</a>
+      <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=vt8qq3r" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/in/maheswar-dtao" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Maheshwar86" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  <button class="toggle-mode" onclick="toggleTheme()">🌗</button>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+    }
+  </script>
+</body>
+</html>
