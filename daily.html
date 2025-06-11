@@ -5,6 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Daily Updates – Maheswar Reddy</title>
   <style>
+    /* Styles for mobile first */
+body {
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* When screen is 768px or wider (tablet & desktop) */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.container {
+  max-width: 100%;
+  padding: 20px;
+}
+
+
     @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:wght@300;600&display=swap');
 
     :root {
@@ -119,6 +143,7 @@
       Deployed Website 😊
       Daily Updates Page Added 
       Post's Page Added  
+      Phone Version Layout Added
     </p>
   </div>
 
