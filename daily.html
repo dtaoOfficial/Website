@@ -2,159 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Daily Updates – Maheswar Reddy</title>
-  <style>
-    /* Styles for mobile first */
-body {
-  font-size: 16px;
-  padding: 10px;
-}
-
-/* When screen is 768px or wider (tablet & desktop) */
-@media (min-width: 768px) {
-  body {
-    font-size: 18px;
-    padding: 20px;
-  }
-
-  .container {
-    display: flex;
-    flex-direction: row;
-  }
-}
-.container {
-  max-width: 100%;
-  padding: 20px;
-}
-
-
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:wght@300;600&display=swap');
-
-    :root {
-      --bg: #0e101a;
-      --panel: rgba(255,255,255,0.06);
-      --text: #e0e0e0;
-      --highlight: #00ffe0;
-    }
-
-    body.light {
-      --bg: #f4f4f4;
-      --panel: rgba(0,0,0,0.08);
-      --text: #111;
-      --highlight: #4CAF50;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Fira Code', monospace;
-      background: var(--bg);
-      color: var(--text);
-      transition: 0.4s ease;
-      min-height: 100vh;
-      padding: 2rem;
-    }
-
-    nav.navbar {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2rem;
-      padding: 1rem;
-      background: var(--panel);
-      border-radius: 12px;
-      backdrop-filter: blur(10px);
-    }
-
-    nav.navbar a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav.navbar a:hover {
-      color: var(--highlight);
-    }
-
-    h1 {
-      text-align: center;
-      color: var(--highlight);
-      margin-bottom: 2rem;
-    }
-
-    .entry {
-      background: var(--panel);
-      border-left: 4px solid var(--highlight);
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-    .entry h2 {
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-      color: var(--highlight);
-    }
-
-    .entry p {
-      white-space: pre-wrap;
-      line-height: 1.5;
-      margin: 0;
-    }
-
-    .toggle {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      padding: 0.6rem 1.2rem;
-      background: var(--panel);
-      border: none;
-      color: var(--text);
-      border-radius: 10px;
-      font-weight: bold;
-      cursor: pointer;
-      backdrop-filter: blur(10px);
-    }
-
-    .toggle:hover {
-      background: var(--highlight);
-      color: #000;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily – Maheswar Reddy</title>
+  <link rel="stylesheet" href="core.css" />
+  <link rel="stylesheet" href="daily.css" />
 </head>
 <body>
+  <div class="moon"></div>
+  <div class="star" style="top: 20px; left: 10vw;"></div>
+  <div class="star" style="top: 80px; left: 50vw;"></div>
+  <div class="star" style="top: 150px; left: 30vw;"></div>
+  <div class="star" style="top: 200px; left: 70vw;"></div>
+  <div class="star" style="top: 300px; left: 40vw;"></div>
+
+  <div class="announcement">🛸 Welcome to <strong>Alien Mode</strong> — Maheswar Galaxy Activated 💫</div>
+
   <nav class="navbar">
-    <a href="index.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="patents.html">Patents</a>
-    <a href="index.html#education">Education</a>
-    <a href="contact.html">Contact Me</a>
-    <a href="posts.html">Posts</a>
+    <div class="nav-links">
+      <a href="index.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="patents.html">Patents</a>
+      <a href="index.html#education">Education</a>
+      <a href="contact.html">Contact Me</a>
+      <a href="posts.html">Posts</a>
+    </div>
+    <button class="toggle" onclick="cycleTheme()">🌗</button>
   </nav>
 
-  <h1>Maheswar’s Daily Dev Log 🚀</h1>
+  <main>
+    <h1>Maheswar’s Daily Dev Log </h1>
 
-  <!-- ✍️ Add your daily updates below -->
-  <div class="entry">
-    <h2>🗓 July 11, 2025</h2>
+    <div class="entry">
+      <h2>🗓 July 11, 2025</h2>
+      <p>
+        Deployed Website 😊  
+        Daily Updates Page Added  
+        Posts Page Added  
+        Phone Version Layout Added
+      </p>
+    </div>
+     <div class="entry">
+    <h2>July 12, 2025</h2>
     <p>
-      Deployed Website 😊
-      Daily Updates Page Added 
-      Post's Page Added  
-      Phone Version Layout Added
+      1) Finalize responsive phone layout fixes across all pages (home.html, projects.html, etc.).
+      2) Apply the new theme styles globally (colors, font updates, background).
+      3) Integrate background animation effects on home and projects pages.
+      4) Add card hover + transition effects on all content cards (e.g., Projects, Achievements).
+      5) Implement the form expand animation with blur effect on the Projects page (bottom-right icon).
     </p>
   </div>
-
-  <!-- ⬇️ You can duplicate this .entry block to add more daily logs -->
-
-  <button class="toggle" onclick="toggleTheme()">🌗</button>
+  <div class="entry">
+    <h2>July 13, 2025</h2>
+    <p>
+      <b>📍 Attended College</b> 
+        ✔ Spent the day at college, actively engaging in academic and practical sessions.
+      <b>📍 Learning Progress</b>
+        ✔ Continued learning Digital Marketing, focusing on modern strategies and tools.
+        ✔ Attended DB2 Lab, with a specific focus on understanding and practicing Window Functions in SQL.
+      <b>📍 Evening Routine</b>
+        ✔ Returned to the room and had a short break.
+        ✔ Enjoyed 3 fresh mangoes as an evening snack .
+      <b>Development Work</b>
+        ✔ Worked on enhancing the website by adding background animation effects to improve user experience and visual appeal.
+    </p>
+  </div>
+  </main>
+<img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" class="rocket" alt="Rocket" />
+<img src="https://em-content.zobj.net/source/apple/391/satellite_1f6f0-fe0f.png" class="satellite" alt="Satellite" />
+<div class="shooting-star"></div>
+<div class="nebula"></div>
+<img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" class="rocket" alt="Rocket" />
+<img src="https://em-content.zobj.net/source/apple/391/satellite_1f6f0-fe0f.png" class="satellite" alt="Satellite" />
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
 
   <script>
-    function toggleTheme() {
-      document.body.classList.toggle('light');
+    const body = document.body;
+    function setTheme(mode) {
+      body.classList.remove("light", "animated");
+      if (mode === "light") body.classList.add("light");
+      else if (mode === "animated") {
+        body.classList.add("animated");
+        playAlienWelcome();
+      }
+      localStorage.setItem("theme", mode);
     }
+    function cycleTheme() {
+      const current = body.classList.contains("light")
+        ? "light"
+        : body.classList.contains("animated")
+        ? "animated"
+        : "dark";
+      const next = current === "dark" ? "light" : current === "light" ? "animated" : "dark";
+      setTheme(next);
+    }
+    function playAlienWelcome() {
+      if ('speechSynthesis' in window && !window._alienSaidHi) {
+        const msg = new SpeechSynthesisUtterance("Welcome to Alien Mode. You have entered the Maheswar Galaxy.");
+        msg.pitch = 1.1;
+        msg.rate = 0.93;
+        msg.lang = 'en-US';
+        window.speechSynthesis.speak(msg);
+        window._alienSaidHi = true;
+      }
+    }
+    const saved = localStorage.getItem("theme") || "dark";
+    setTheme(saved);
   </script>
 </body>
 </html>

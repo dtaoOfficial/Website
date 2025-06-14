@@ -1,0 +1,27 @@
+h1 {
+  text-align: center;
+  color: var(--highlight);
+  margin: 2rem 0 1.5rem;
+  font-size: 2rem;
+}
+.entry {
+  background: var(--card-bg);
+  border-left: 4px solid var(--highlight);
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease;
+}
+.entry h2 {
+  color: var(--highlight);
+  margin-bottom: 0.5rem;
+}
+.entry p {
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+body.animated .entry:hover {
+  transform: scale(1.015);
+  box-shadow: 0 12px 28px var(--highlight);
+}

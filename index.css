@@ -1,0 +1,84 @@
+/* Layout for index.html */
+
+.main-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.left-block {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.left-block img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.left-block img:hover {
+  transform: scale(1.05);
+}
+
+.right-block {
+  flex: 2;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: var(--blur);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  border-radius: 20px;
+  padding: 1.5rem;
+  width: 100%;
+  transition: background 0.5s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+body.animated .glass-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 14px 40px var(--highlight);
+}
+body:not(.animated) .glass-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+h1, h2 {
+  color: var(--highlight);
+  margin-bottom: 1rem;
+}
+ul {
+  padding-left: 1.2rem;
+}
+
+.last-update {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  backdrop-filter: var(--blur);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -4,155 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Posts – Maheswar Reddy</title>
-  <style>
-    /* Styles for mobile first */
-body {
-  font-size: 16px;
-  padding: 10px;
-}
-
-/* When screen is 768px or wider (tablet & desktop) */
-@media (min-width: 768px) {
-  body {
-    font-size: 18px;
-    padding: 20px;
-  }
-
-  .container {
-    display: flex;
-    flex-direction: row;
-  }
-}
-.container {
-  max-width: 100%;
-  padding: 20px;
-}
-
-
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-
-    :root {
-      --bg: #111827;
-      --card: rgba(255, 255, 255, 0.08);
-      --text: #fff;
-      --accent: #00ffe0;
-    }
-
-    body.light {
-      --bg: #f4f4f4;
-      --card: rgba(0,0,0,0.08);
-      --text: #111;
-      --accent: #4CAF50;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      padding: 2rem;
-      transition: 0.3s ease;
-    }
-
-    nav.navbar {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2rem;
-      padding: 1rem;
-      backdrop-filter: blur(10px);
-      background: var(--card);
-      border-radius: 12px;
-    }
-
-    nav.navbar a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav.navbar a:hover {
-      color: var(--accent);
-    }
-
-    h1 {
-      text-align: center;
-      color: var(--accent);
-      margin-bottom: 2rem;
-      font-size: 2.2rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .card {
-      background: var(--card);
-      backdrop-filter: blur(10px);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-      transition: transform 0.4s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-    }
-
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-
-    .card p {
-      padding: 1rem;
-      text-align: center;
-      font-weight: 500;
-    }
-
-    .toggle {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      padding: 0.6rem 1.2rem;
-      background: var(--card);
-      border: none;
-      border-radius: 10px;
-      color: var(--text);
-      cursor: pointer;
-      font-weight: bold;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-    }
-
-    .toggle:hover {
-      background: var(--accent);
-      color: #000;
-    }
-  </style>
+  <link rel="stylesheet" href="core.css" />
+  <link rel="stylesheet" href="posts.css" />
 </head>
 <body>
+  <div class="moon"></div>
+  <div class="star" style="top: 30px; left: 20vw;"></div>
+  <div class="star" style="top: 100px; left: 60vw;"></div>
+  <div class="star" style="top: 180px; left: 35vw;"></div>
+  <div class="star" style="top: 250px; left: 80vw;"></div>
+  <div class="star" style="top: 320px; left: 50vw;"></div>
+
+  <div class="announcement">🛸 Welcome to <strong>Alien Mode</strong> — Maheswar Galaxy Activated 💫</div>
+
   <nav class="navbar">
-    <a href="index.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="patents.html">Patents</a>
-    <a href="index.html#education">Education</a>
-    <a href="contact.html">Contact Me</a>
+    <div class="nav-links">
+      <a href="index.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="patents.html">Patents</a>
+      <a href="index.html#education">Education</a>
+      <a href="daily.html">Daily Updates</a>
+      <a href="contact.html">Contact Me</a>
+    </div>
+    <button class="toggle" onclick="cycleTheme()">🌗</button>
   </nav>
 
   <h1>Achievements & Highlights 🏆</h1>
 
   <div class="grid">
-    <!-- 👇 Duplicate this card block for each post -->
     <div class="card">
       <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1749648479/Photo3.jpg" alt="Achievement" />
       <p>🏅 Won 1st Prize – Honored to receive the Best Paper Award in Cybersecurity — grateful for the recognition, and even more excited for what’s ahead!</p>
@@ -160,15 +39,61 @@ body {
 
     <div class="card">
       <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1749648479/Photo1.jpg" alt="Voting System" />
-      <p>🎖️ "Prize in hand, heart full of gratitude — moments like these make the grind worth it! 🏆🎁</p>
+      <p>🎖️ Prize in hand, heart full of gratitude — moments like these make the grind worth it!</p>
     </div>
 
     <div class="card">
       <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1749648480/prize.jpg" alt="Fire Detection" />
       <p>🔥 Big thanks to New Horizon College — your support, guidance, and inspiration made this achievement possible!</p>
     </div>
+    <div class="card">
+      <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1749867631/yukthi%20photo.jpg" alt="Yukthi">
+      <p>Thank you for giving me this wonderful opportunity—I'm truly honored and grateful to receive this certificate. It means a lot to me and motivates me to keep growing and learning.</p>
+    </div>
   </div>
+<img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" class="rocket" alt="Rocket" />
+<img src="https://em-content.zobj.net/source/apple/391/satellite_1f6f0-fe0f.png" class="satellite" alt="Satellite" />
+<div class="shooting-star"></div>
+<div class="nebula"></div>
+<img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" class="rocket" alt="Rocket" />
+<img src="https://em-content.zobj.net/source/apple/391/satellite_1f6f0-fe0f.png" class="satellite" alt="Satellite" />
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
 
-  <button class="toggle" onclick="document.body.classList.toggle('light')">🌗</button>
+  <script>
+    const body = document.body;
+    function setTheme(mode) {
+      body.classList.remove("light", "animated");
+      if (mode === "light") body.classList.add("light");
+      else if (mode === "animated") {
+        body.classList.add("animated");
+        playAlienWelcome();
+      }
+      localStorage.setItem("theme", mode);
+    }
+    function cycleTheme() {
+      const current = body.classList.contains("light")
+        ? "light"
+        : body.classList.contains("animated")
+        ? "animated"
+        : "dark";
+      const next = current === "dark" ? "light" : current === "light" ? "animated" : "dark";
+      setTheme(next);
+    }
+    function playAlienWelcome() {
+      if ('speechSynthesis' in window && !window._alienSaidHi) {
+        const msg = new SpeechSynthesisUtterance("Welcome to Alien Mode. You have entered the Maheswar Galaxy.");
+        msg.pitch = 1.1;
+        msg.rate = 0.95;
+        msg.lang = 'en-US';
+        window.speechSynthesis.speak(msg);
+        window._alienSaidHi = true;
+      }
+    }
+    const saved = localStorage.getItem("theme") || "dark";
+    setTheme(saved);
+  </script>
 </body>
 </html>

@@ -2,185 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Me – Maheswar Reddy</title>
-  <style>
-    /* Styles for mobile first */
-body {
-  font-size: 16px;
-  padding: 10px;
-}
-
-/* When screen is 768px or wider (tablet & desktop) */
-@media (min-width: 768px) {
-  body {
-    font-size: 18px;
-    padding: 20px;
-  }
-
-  .container {
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-
-    :root {
-      --bg: #0f172a;
-      --card: rgba(255,255,255,0.08);
-      --text: #fff;
-      --highlight: #00ffe0;
-      --blur: blur(10px);
-    }
-
-    body.light {
-      --bg: #f9f9f9;
-      --card: rgba(0,0,0,0.05);
-      --text: #222;
-      --highlight: #4CAF50;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      transition: 0.4s ease;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
-    }
-    .container {
-  max-width: 100%;
-  padding: 20px;
-}
-
-
-    nav.navbar {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2.5rem;
-      padding: 1rem;
-      backdrop-filter: var(--blur);
-      background: var(--card);
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    }
-
-    nav.navbar a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav.navbar a:hover {
-      color: var(--highlight);
-    }
-
-    .contact-card {
-      max-width: 700px;
-      width: 100%;
-      background: var(--card);
-      backdrop-filter: var(--blur);
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-      text-align: center;
-      animation: popIn 1s ease forwards;
-    }
-
-    .contact-card img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-    }
-
-    .contact-card h1 {
-      color: var(--highlight);
-      margin-bottom: 0.5rem;
-    }
-
-    .contact-card p {
-      margin-bottom: 1.5rem;
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
-
-    .links a {
-      padding: 0.8rem 1.2rem;
-      border-radius: 10px;
-      background: var(--highlight);
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-
-    .links a:hover {
-      transform: translateY(-5px) scale(1.03);
-      background: #fff;
-      color: #000;
-    }
-
-    .toggle-mode {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      padding: 0.6rem 1.2rem;
-      background: var(--card);
-      border: none;
-      border-radius: 10px;
-      color: var(--text);
-      cursor: pointer;
-      font-weight: bold;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-      transition: 0.3s ease;
-      z-index: 999;
-    }
-
-    .toggle-mode:hover {
-      background: var(--highlight);
-      color: #000;
-    }
-
-    @keyframes popIn {
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Maheswar Reddy</title>
+  <link rel="stylesheet" href="core.css" />
+  <link rel="stylesheet" href="contact.css" />
 </head>
 <body>
+  <!-- Cosmic Layers -->
+  <div class="moon"></div>
+  <div class="star" style="top: 30px; left: 20vw;"></div>
+  <div class="star" style="top: 100px; left: 60vw;"></div>
+  <div class="star" style="top: 180px; left: 35vw;"></div>
+  <div class="star" style="top: 250px; left: 80vw;"></div>
+  <div class="star" style="top: 320px; left: 50vw;"></div>
+
+  <div class="announcement">🛸 Welcome to <strong>Alien Mode</strong> — Maheswar Galaxy Activated 💫</div>
+
   <nav class="navbar">
-    <a href="index.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="patents.html">Patents</a>
-    <a href="daily.html">Daily Updates</a>
-    <a href="index.html#education">Education</a>
-    <a href="posts.html">Posts</a>
+    <div class="nav-links">
+      <a href="index.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="patents.html">Patents</a>
+      <a href="daily.html">Daily Updates</a>
+      <a href="index.html#education">Education</a>
+      <a href="posts.html">Posts</a>
+    </div>
+    <button class="toggle-mode" onclick="cycleTheme()">🌗</button>
   </nav>
 
   <div class="contact-card">
@@ -194,13 +41,52 @@ body {
       <a href="https://github.com/Maheshwar86" target="_blank">GitHub</a>
     </div>
   </div>
-
-  <button class="toggle-mode" onclick="toggleTheme()">🌗</button>
+<img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" class="rocket" alt="Rocket" />
+<img src="https://em-content.zobj.net/source/apple/391/satellite_1f6f0-fe0f.png" class="satellite" alt="Satellite" />
+<div class="shooting-star"></div>
+<div class="nebula"></div>
+<img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" class="rocket" alt="Rocket" />
+<img src="https://em-content.zobj.net/source/apple/391/satellite_1f6f0-fe0f.png" class="satellite" alt="Satellite" />
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
+<div class="shooting-star"></div>
 
   <script>
-    function toggleTheme() {
-      document.body.classList.toggle('light');
+    const body = document.body;
+    function setTheme(mode) {
+      body.classList.remove("light", "animated");
+      if (mode === "light") {
+        body.classList.add("light");
+      } else if (mode === "animated") {
+        body.classList.add("animated");
+        announceAlienMode();
+      }
+      localStorage.setItem("theme", mode);
     }
+    function cycleTheme() {
+      const current = body.classList.contains("light")
+        ? "light"
+        : body.classList.contains("animated")
+        ? "animated"
+        : "dark";
+      const next = current === "dark" ? "light" : current === "light" ? "animated" : "dark";
+      setTheme(next);
+    }
+    function announceAlienMode() {
+      if ('speechSynthesis' in window && !window._alienSaidHi) {
+        const msg = new SpeechSynthesisUtterance(
+          "Welcome to Alien Mode. You have entered the Maheswar Galaxy."
+        );
+        msg.pitch = 1.1;
+        msg.rate = 0.95;
+        msg.lang = 'en-US';
+        window.speechSynthesis.speak(msg);
+        window._alienSaidHi = true;
+      }
+    }
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    setTheme(savedTheme);
   </script>
 </body>
 </html>
