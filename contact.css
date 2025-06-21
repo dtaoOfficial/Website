@@ -1,3 +1,4 @@
+/* 📦 Contact Card */
 .contact-card {
   max-width: 600px;
   margin: auto;
@@ -8,7 +9,14 @@
   box-shadow: 0 8px 24px rgba(0,0,0,0.25);
   text-align: center;
   transition: transform 0.4s ease;
+  animation: bounce 3s ease-in-out infinite;
 }
+body.animated .contact-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 14px 40px var(--highlight);
+}
+
+/* 👤 Avatar */
 .contact-card img {
   width: 120px;
   height: 120px;
@@ -17,10 +25,14 @@
   margin-bottom: 1rem;
   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
+
+/* 🎉 Title */
 .contact-card h1 {
   color: var(--highlight);
   margin-bottom: 0.5rem;
 }
+
+/* 🔗 Social Links */
 .links {
   display: flex;
   flex-wrap: wrap;
@@ -42,7 +54,186 @@
   background: #fff;
   color: #000;
 }
-body.animated .contact-card:hover {
+
+/* ✨ Bounce Animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* 🧬 Gender Dropdown */
+.gender-select {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+.gender-select label {
+  font-weight: bold;
+  color: var(--highlight);
+  font-size: 1rem;
+}
+.gender-select select {
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  color: var(--text-color);
+  font-size: 1rem;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  backdrop-filter: var(--blur);
+  transition: box-shadow 0.4s ease, transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+.gender-select select:hover,
+.gender-select select:focus {
+  box-shadow: 0 8px 20px var(--highlight);
+  transform: scale(1.03);
+  background: rgba(255,255,255,0.1);
+}
+
+/* 📝 Contact Form */
+.contact-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 90%;
+  max-width: 400px;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--text-color);
+  font-size: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  backdrop-filter: var(--blur);
+}
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--highlight);
+  transform: scale(1.01);
+  background: rgba(255, 255, 255, 0.1);
+}
+.contact-form textarea {
+  resize: none;
+  min-height: 100px;
+}
+.contact-form button {
+  padding: 0.8rem 1.5rem;
+  background: var(--highlight);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-form button:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 18px var(--highlight);
+}
+
+/* ✅ Success Message */
+.form-success {
+  display: none;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--highlight);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* ⏱ Countdown Overlay */
+.countdown-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.93);
+  color: var(--highlight);
+  font-size: 4rem;
+  font-weight: bold;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.5s ease-out;
+}
+.countdown-overlay .count {
+  animation: pulse 1s ease infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.dropdown {
+  position: relative;
+  width: 250px;
+  margin: 2rem auto;
+  user-select: none;
+  font-weight: bold;
+}
+
+.selected {
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-color);
+  box-shadow: 0 0 10px var(--highlight);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: var(--blur);
+}
+
+.selected:hover {
+  background: rgba(255, 255, 255, 0.12);
   transform: scale(1.02);
-  box-shadow: 0 14px 40px var(--highlight);
+  box-shadow: 0 0 16px var(--highlight);
+}
+
+.options {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  z-index: 1000;
+}
+
+.dropdown.open .options {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.options li {
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: background 0.3s ease;
+}
+
+.options li:hover {
+  background: var(--highlight);
+  color: #ffffff;
 }

@@ -7,17 +7,25 @@
   <link rel="stylesheet" href="core.css" />
   <link rel="stylesheet" href="contact.css" />
 </head>
-<body>
-  <!-- Cosmic Layers -->
+<!-- Sky Layers -->
   <div class="moon"></div>
   <div class="star" style="top: 30px; left: 20vw;"></div>
   <div class="star" style="top: 100px; left: 60vw;"></div>
   <div class="star" style="top: 180px; left: 35vw;"></div>
   <div class="star" style="top: 250px; left: 80vw;"></div>
   <div class="star" style="top: 320px; left: 50vw;"></div>
+  <div class="nebula"></div>
+  <img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" class="rocket" alt="Rocket" />
+  <img src="https://em-content.zobj.net/source/apple/391/satellite_1f6f0-fe0f.png" class="satellite" alt="Satellite" />
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
 
+  <!-- Announcement -->
   <div class="announcement">🛸 Welcome to <strong>Alien Mode</strong> — Maheswar Galaxy Activated 💫</div>
 
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-links">
       <a href="index.html">About</a>
@@ -30,30 +38,52 @@
     <button class="toggle-mode" onclick="cycleTheme()">🌗</button>
   </nav>
 
+  <!-- Contact Section -->
   <div class="contact-card">
-    <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1740053991/cj4q4u7w4fqkhtffg55b.png" alt="Maheswar"/>
+    <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1740053991/cj4q4u7w4fqkhtffg55b.png" alt="Maheswar" />
     <h1>Let’s Connect!</h1>
     <p>We can learn, build, and create something amazing together 💡</p>
+
     <div class="links">
       <a href="https://chat.whatsapp.com/EhPmtNXQ2II4V6Sa4y2prR" target="_blank">WhatsApp</a>
       <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=vt8qq3r" target="_blank">Instagram</a>
       <a href="https://www.linkedin.com/in/maheswar-dtao" target="_blank">LinkedIn</a>
       <a href="https://github.com/Maheshwar86" target="_blank">GitHub</a>
     </div>
-  </div>
-<img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" class="rocket" alt="Rocket" />
-<img src="https://em-content.zobj.net/source/apple/391/satellite_1f6f0-fe0f.png" class="satellite" alt="Satellite" />
-<div class="shooting-star"></div>
-<div class="nebula"></div>
-<img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" class="rocket" alt="Rocket" />
-<img src="https://em-content.zobj.net/source/apple/391/satellite_1f6f0-fe0f.png" class="satellite" alt="Satellite" />
-<div class="shooting-star"></div>
-<div class="shooting-star"></div>
-<div class="shooting-star"></div>
-<div class="shooting-star"></div>
 
+    <!-- ✅ Netlify Form -->
+    <form name="contact" method="POST" data-netlify="true" class="contact-form" id="contactForm">
+      <input type="hidden" name="form-name" value="contact" />
+
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="text" name="status" placeholder="Current Status (e.g. Student, Developer)" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+
+      <div class="dropdown">
+        <div class="selected">🧬 Choose your form...</div>
+        <ul class="options">
+          <li data-value="god">👑 God</li>
+          <li data-value="alien">👽 Alien</li>
+          <li data-value="animal">🐾 Animal</li>
+          <li data-value="human">🧑 Human</li>
+        </ul>
+        <input type="hidden" name="gender" id="formValue" />
+      </div>
+
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message 🚀</button>
+    </form>
+
+    <div class="form-success" id="successMsg">✅ Sent Successfully!</div>
+  </div>
+
+  <!-- Countdown Overlay -->
+  <div class="countdown-overlay" id="countdown">
+    <div class="count">3</div>
+  </div>
   <script>
     const body = document.body;
+
     function setTheme(mode) {
       body.classList.remove("light", "animated");
       if (mode === "light") {
@@ -64,6 +94,7 @@
       }
       localStorage.setItem("theme", mode);
     }
+
     function cycleTheme() {
       const current = body.classList.contains("light")
         ? "light"
@@ -73,11 +104,10 @@
       const next = current === "dark" ? "light" : current === "light" ? "animated" : "dark";
       setTheme(next);
     }
+
     function announceAlienMode() {
       if ('speechSynthesis' in window && !window._alienSaidHi) {
-        const msg = new SpeechSynthesisUtterance(
-          "Welcome to Alien Mode. You have entered the Maheswar Galaxy."
-        );
+        const msg = new SpeechSynthesisUtterance("Welcome to Alien Mode. You have entered the Maheswar Galaxy.");
         msg.pitch = 1.1;
         msg.rate = 0.95;
         msg.lang = 'en-US';
@@ -85,8 +115,74 @@
         window._alienSaidHi = true;
       }
     }
+
     const savedTheme = localStorage.getItem("theme") || "dark";
     setTheme(savedTheme);
+
+    // 💌 Final Countdown + Submit Script
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const overlay = document.getElementById("countdown");
+      const countEl = overlay.querySelector(".count");
+      const success = document.getElementById('successMsg');
+      let num = 3;
+
+      overlay.style.display = "flex";
+      countEl.textContent = num;
+
+      const interval = setInterval(() => {
+        num--;
+        if (num === 0) {
+          clearInterval(interval);
+          countEl.textContent = "✅";
+
+          fetch("https://formsubmit.co/imsingle8688@gmail.com", {
+            method: "POST",
+            body: new FormData(form),
+          })
+          .then(() => {
+            setTimeout(() => {
+              overlay.style.display = "none";
+              form.reset();
+              success.style.display = 'block';
+              success.style.opacity = '1';
+              success.style.transform = 'translateY(0)';
+            }, 1000);
+          })
+          .catch(() => {
+            countEl.textContent = "❌";
+          });
+        } else {
+          countEl.textContent = num;
+        }
+      }, 1000);
+    });
+
+    // 🧬 Dropdown logic
+    const dropdown = document.querySelector(".dropdown");
+    const selected = dropdown.querySelector(".selected");
+    const options = dropdown.querySelectorAll(".options li");
+    const hiddenInput = document.getElementById("formValue");
+
+    selected.addEventListener("click", () => {
+      dropdown.classList.toggle("open");
+    });
+
+    options.forEach(option => {
+      option.addEventListener("click", () => {
+        selected.textContent = option.textContent;
+        hiddenInput.value = option.dataset.value;
+        dropdown.classList.remove("open");
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove("open");
+      }
+    });
   </script>
 </body>
 </html>
