@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="core.css" />
   <link rel="stylesheet" href="contact.css" />
 </head>
-<!-- Sky Layers -->
+<body>
+  <!-- Sky Layers -->
   <div class="moon"></div>
   <div class="star" style="top: 30px; left: 20vw;"></div>
   <div class="star" style="top: 100px; left: 60vw;"></div>
@@ -51,10 +52,8 @@
       <a href="https://github.com/Maheshwar86" target="_blank">GitHub</a>
     </div>
 
-    <!-- ✅ Netlify Form -->
-    <form name="contact" method="POST" data-netlify="true" class="contact-form" id="contactForm">
-      <input type="hidden" name="form-name" value="contact" />
-
+    <!-- Contact Form -->
+    <form id="contactForm" class="contact-form">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="text" name="status" placeholder="Current Status (e.g. Student, Developer)" required />
       <input type="email" name="email" placeholder="Your Email" required />
@@ -81,6 +80,8 @@
   <div class="countdown-overlay" id="countdown">
     <div class="count">3</div>
   </div>
+
+  <!-- Scripts -->
   <script>
     const body = document.body;
 
@@ -138,7 +139,7 @@
           clearInterval(interval);
           countEl.textContent = "✅";
 
-          fetch("https://formsubmit.co/imsingle8688@gmail.com", {
+          fetch("https://formsubmit.co/maheswar.dtaoofficial@gmail.com", {
             method: "POST",
             body: new FormData(form),
           })
