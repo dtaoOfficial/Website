@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reels Page - Coming Soon</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #f2f6ff, #e6f0ff);
+      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      animation: fadeBg 5s ease infinite alternate;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #444;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    .coming-btn {
+      padding: 20px 40px;
+      font-size: 2rem;
+      border: none;
+      border-radius: 50px;
+      background: #6c63ff;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+      transition: all 0.3s ease;
+      animation: gentlePulse 3s ease-in-out infinite;
+    }
+
+    .coming-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(108, 99, 255, 0.5);
+    }
+
+    @keyframes gentlePulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+      }
+      50% {
+        transform: scale(1.03);
+        box-shadow: 0 0 20px rgba(108, 99, 255, 0.4);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeBg {
+      0% { background: linear-gradient(135deg, #f2f6ff, #e6f0ff); }
+      100% { background: linear-gradient(135deg, #eaf0ff, #d8e5ff); }
+    }
+
+    .footer-note {
+      margin-top: 40px;
+      font-size: 1rem;
+      color: #666;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Reels Section</h1>
+  <button class="coming-btn">Coming Soon</button>
+  <div class="footer-note">Page under development – stay tuned!</div>
+</body>
+</html>
