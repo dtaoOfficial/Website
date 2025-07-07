@@ -1,0 +1,157 @@
+/* 🌌 Galaxy Layout Locks */
+html, body {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+}
+
+/* ✨ Section Heading */
+.reels-heading {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #00ffee;
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 0 12px #00ffee88;
+  letter-spacing: 1px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* 🖼️ Scrollable Reels Frame */
+.reels-frame {
+  width: 92vw;
+  max-width: 1000px;
+  height: 420px;
+  margin: 0 auto;
+  overflow-y: auto;
+  padding: 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 255, 255, 0.1);
+  position: relative;
+  z-index: 10;
+}
+.reels-frame::-webkit-scrollbar {
+  display: none;
+}
+.reels-frame {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 🎥 Reels Grid */
+.reels-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 🧱 Each Reel Box */
+.reel-item {
+  flex: 1 1 calc(33.33% - 16px);
+  max-width: calc(33.33% - 16px);
+  position: relative;
+  transition: flex 0.3s ease;
+}
+
+.reel-item.active {
+  flex: 1 1 48%;
+  z-index: 2;
+}
+
+/* 🎬 Video Styles */
+.reel-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.reel-item.active .reel-video {
+  transform: scale(1.07);
+}
+.reels-heading {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 800;
+  color:whitesmoke; /* adds base visibility */
+  letter-spacing: 1.2px;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+
+  /* blur vibe */
+  text-shadow:
+    0 0 4px #00ffee66,
+    0 0 8px #00ffee88,
+    0 0 16px #00ffeeaa,
+    0 0 32px #00ffee66;
+  
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 4px #00ffee66,
+      0 0 8px #e8294988,
+      0 0 16px #e7e023aa,
+      0 0 32px #ec27ba66;
+    opacity: 1;
+  }
+  50% {
+    text-shadow:
+      0 0 6px #0ce15eaa,
+      0 0 16px #00ffeecc,
+      0 0 28px #d725e3aa;
+    opacity: 0.85;
+  }
+}
+
+
+@keyframes flickerGlow {
+  0%, 100% {
+    opacity: 1;
+    text-shadow:
+      0 0 2px #00ffee44,
+      0 0 4px #47ed6b66,
+      0 0 8px #00ffee88,
+      0 0 12px #9a47edaa,
+      0 0 16px #00ffeecc;
+  }
+  50% {
+    opacity: 0.85;
+    text-shadow:
+      0 0 6px #20ec4caa,
+      0 0 12px #d9ecebcc,
+      0 0 20px #ea5353cc;
+  }
+}
+
+
+@keyframes flickerGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px #00ffeeaa, 0 0 20px #00ffee88, 0 0 40px #00ffee66;
+    opacity: 1;
+  }
+  50% {
+    text-shadow: 0 0 18px #00ffeecc, 0 0 30px #00ffeeaa, 0 0 50px #00ffeeaa;
+    opacity: 0.88;
+  }
+}
+
+
+@keyframes flickerGlow {
+  0%, 100% { opacity: 1; text-shadow: 0 0 8px #00ffee80; }
+  50% { opacity: 0.8; text-shadow: 0 0 16px #00ffeecc; }
+}

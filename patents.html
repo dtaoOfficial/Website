@@ -92,7 +92,7 @@
     }
     function playAlienWelcome() {
       if ('speechSynthesis' in window && !window._alienSaidHi) {
-        const msg = new SpeechSynthesisUtterance("Welcome to Alien Mode. You have entered the Maheswar Galaxy.");
+        const msg = new SpeechSynthesisUtterance("");
         msg.pitch = 1.1;
         msg.rate = 0.95;
         msg.lang = 'en-US';

@@ -70,8 +70,8 @@
           <li data-value="alien">👽 Alien</li>
           <li data-value="animal">🐾 Animal</li>
           <li data-value="human">🧑 Human</li>
-        </ul>
-        <input type="hidden" name="gender" id="formValue" />
+        </ul>formValue
+        <input type="hidden" name="gender" id="" />
       </div>
 
       <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
@@ -113,7 +113,7 @@
 
     function announceAlienMode() {
       if ('speechSynthesis' in window && !window._alienSaidHi) {
-        const msg = new SpeechSynthesisUtterance("Welcome to Alien Mode. You have entered the Maheswar Galaxy.");
+        const msg = new SpeechSynthesisUtterance("");
         msg.pitch = 1.1;
         msg.rate = 0.95;
         msg.lang = 'en-US';
