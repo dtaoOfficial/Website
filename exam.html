@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Countdown to 25 July 2025</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(-45deg, #e23b41, #1ae82c, #9d3cec, #f1b70a);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+      color: #fff;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .countdown {
+      text-align: center;
+    }
+
+    .title {
+      font-size: 2em;
+      margin-bottom: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    }
+
+    .timer {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+
+    .unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+      backdrop-filter: blur(5px);
+      min-width: 100px;
+    }
+
+    .number {
+      font-size: 2.5em;
+      transition: all 0.5s ease;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .number.change {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    .label {
+      font-size: 0.8em;
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
+
+    .coming-soon {
+      font-size: 3em;
+      font-weight: bold;
+      text-shadow: 0 0 10px #fff;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fff; }
+      to { text-shadow: 0 0 20px #ff0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="countdown">
+    <div class="title">Countdown to 25 July 2025</div>
+    <div class="timer" id="timer">
+      <div class="unit">
+        <div class="number" id="days">--</div>
+        <div class="label">Days</div>
+      </div>
+      <div class="unit">
+        <div class="number" id="hours">--</div>
+        <div class="label">Hours</div>
+      </div>
+      <div class="unit">
+        <div class="number" id="minutes">--</div>
+        <div class="label">Minutes</div>
+      </div>
+      <div class="unit">
+        <div class="number" style="color: #e23b41;" id="seconds">--</div>
+        <div class="label" style="color: crimson;">Seconds</div>
+      </div>
+    </div>
+    <div class="coming-soon" id="comingSoon" style="display:none;">🚀 COMING SOON 🚀</div>
+  </div>
+
+  <script>
+    const countdownDate = new Date("2025-07-25T00:00:00").getTime();
+
+    function animateNumberChange(element, newValue) {
+      if (element.textContent !== newValue) {
+        element.classList.add("change");
+        setTimeout(() => {
+          element.textContent = newValue;
+          element.classList.remove("change");
+        }, 250);
+      }
+    }
+
+    function updateTimer() {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      if (distance <= 0) {
+        document.getElementById("timer").style.display = "none";
+        document.getElementById("comingSoon").style.display = "block";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      animateNumberChange(document.getElementById("days"), String(days).padStart(2, '0'));
+      animateNumberChange(document.getElementById("hours"), String(hours).padStart(2, '0'));
+      animateNumberChange(document.getElementById("minutes"), String(minutes).padStart(2, '0'));
+      animateNumberChange(document.getElementById("seconds"), String(seconds).padStart(2, '0'));
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  </script>
+</body>
+</html>
