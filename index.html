@@ -3,166 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Maheswar Galaxy – Home</title>
-  <link rel="stylesheet" href="core.css" />
-  <link rel="stylesheet" href="index.css" />
+  <title>DTAO | Under Repair</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f2f2;
+      color: #333;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
+      background: #ffffffcc;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      animation: fadeSlide 1s ease-out;
+    }
+
+    .logo {
+      font-size: 3em;
+      font-weight: bold;
+      color: #2a2a2a;
+      margin-bottom: 10px;
+    }
+
+    .message {
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .countdown {
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 2em;
+      }
+
+      .message, .countdown {
+        font-size: 1em;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Alien Mode Sky Elements -->
-  <div class="moon"></div>
-  <div class="star" style="top: 20px; left: 10vw;"></div>
-  <div class="star" style="top: 80px; left: 50vw;"></div>
-  <div class="star" style="top: 150px; left: 30vw;"></div>
-  <div class="star" style="top: 200px; left: 70vw;"></div>
-  <div class="star" style="top: 300px; left: 40vw;"></div>
-  <div class="nebula"></div>
-  <img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" class="rocket" alt="Rocket" />
-  <img src="https://em-content.zobj.net/source/apple/391/satellite_1f6f0-fe0f.png" class="satellite" alt="Satellite" />
-  <div class="shooting-star"></div>
-  <div class="shooting-star"></div>
-  <div class="shooting-star"></div>
-  <div class="shooting-star"></div>
 
-  <!-- Announcement -->
-  <div class="announcement">🛸 Welcome to <strong>Alien Mode</strong> — Maheswar Galaxy Activated 💫</div>
-
-  <!-- Navigation -->
-  <nav class="navbar">
-  <div class="nav-links">
-    <a href="projects.html">Projects</a>
-    <a href="patents.html">Patents</a>
-    <a href="#education">Education</a>
-    <a href="daily.html">Daily Updates</a>
-    <a href="contact.html">Contact Me</a>
-    <a href="posts.html">Posts</a>
-    <a href="reels.html">reels</a>
-    <a href="exam.html">Exam</a>
-
-  </div>
-  <button class="toggle-mode" onclick="cycleTheme()">🌗</button>
-</nav>
-
-
-  <!-- Main Content -->
-  <div class="main-wrapper">
-    <div class="left-block">
-      <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1740053991/cj4q4u7w4fqkhtffg55b.png"
-        alt="Profile"
-        onclick="window.open('https://github.com/Maheshwar86', '_blank')" />
-      <div class="glass-card" id="education">
-        <h2>Education</h2>
-        <ul>
-          <li><strong>10th:</strong> ZP High School, Kallur, AP – 517113</li>
-          <li><strong>Inter (MPC):</strong> NRI Junior College, Tirupati</li>
-          <li><strong>Degree (B.Com):</strong> VRR College, Kallur, AP – 517113</li>
-          <li><strong>PG (MCA):</strong> New Horizon College of Engineering, Bangalore</li>
-        </ul>
-      </div>
-      <div class="glass-card" id="skills">
-  <h2>My Skills</h2>
-  <ul>
-    <li><strong>Programming:</strong> Java, Spring Boot, Java Swing, Python, HTML</li>
-    <li><strong>Databases:</strong> MySQL, MongoDB</li>
-    <li><strong>Ethical Hacking (Level 1):</strong> Phone hacking, laptop hacking, DoS attacks on Wi-Fi</li>
-    <li><strong>Tech Abilities:</strong> Fast learner, passionate about innovation & tech</li>
-    <li><strong>Software Skills:</strong> MS Office, VS Code, Intellij, Pycharm, VMWare, Kali Linux, Windows, Ubuntu</li>
-    <li><strong>Laptop Repair:</strong> Battery, Hard Disk, RAM, SSD, Motherboard replacements</li>
-    <li><strong>Phone Repair:</strong> Battery, Camera replacements</li>
-    <li><strong>Achievements:</strong> 8 Patents filed</li>
-    <li><strong>Projects:</strong> 3 completed, 4th in progress</li>
-  </ul>
-</div>
-
-    </div>
-
-    <div class="right-block">
-      <div class="glass-card" id="about">
-        <h1>Hi Friends 👽</h1>
-        <p>I am Alien. My name is <strong>Maheswar Reddy</strong>. Welcome to my site to learn together 🚀</p>
-      </div>
-
-      <div class="glass-card">
-        <h2>Status</h2>
-        <p>👨‍🎓 <strong>Student</strong></p>
-      </div>
-
-      <div class="glass-card">
-        <h2>Announcement</h2>
-        <p>
-          Hey Friends, Upcoming Website Updates! <a style="color: rgb(83, 241, 83);" href="exam.html"><b>Exam</b></a>
-          <b style="color: brown;">Date: 26/07/2025</b>
-
-What’s Coming Soon:
-1) Exam Section Expansion<br>
- Python (✅ Completed)<br>
- Java, MongoDB, MySQL, Java Spring Boot, Java Swing, Hibernate (⏳ In Progress)<br>
-
- 2) New Exam Pages for Each Language<br>
- Featuring 5 Levels:<br>
- Easy<br>
- Medium<br>
- Advanced<br>
- Company Level<br>
- Debug Coding Questions<br>
-
-3) Score System Integration<br>
-4) Track your marks after each test<br>
-5) More than 40+ Questions Per Level<br>
-6) Practice & master every level<br>
-
--> Write Exams Based on Your Selected Language!<br>
--> Stay tuned! I'm actively updating all sections to give you the best learning experience
-        </p>
-      </div>
-    </div>
+  <div class="container">
+    <div class="logo">DTAO</div>
+    <div class="message">Website is under repair.<br>We are updating exam features.</div>
+    <div class="countdown" id="countdown">Loading countdown...</div>
   </div>
 
-  <!-- Toggle -->
-
-  <!-- Footer -->
-  <footer class="last-update">
-    Last Update: 08/07/2025 , 04:15 PM <span id="update-date"></span>
-  </footer>
-
-  <!-- Theme Script -->
   <script>
-    const body = document.body;
-    function setTheme(mode) {
-      body.classList.remove("light", "animated");
-      if (mode === "light") {
-        body.classList.add("light");
-      } else if (mode === "animated") {
-        body.classList.add("animated");
-        playAlienWelcome();
+    const targetDate = new Date("2025-07-25T00:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        countdownEl.innerText = "✅ We're back online!";
+        return;
       }
-      localStorage.setItem("theme", mode);
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      countdownEl.innerText = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s remaining`;
     }
 
-    function cycleTheme() {
-      const current = body.classList.contains("light")
-        ? "light"
-        : body.classList.contains("animated")
-        ? "animated"
-        : "dark";
-      const next = current === "dark" ? "light" : current === "light" ? "animated" : "dark";
-      setTheme(next);
-    }
-
-    function playAlienWelcome() {
-      if ('speechSynthesis' in window && !window._alienSaidHi) {
-        const msg = new SpeechSynthesisUtterance(
-          ""
-        );
-        msg.pitch = 1.1;
-        msg.rate = 0.93;
-        msg.lang = 'en-US';
-        window.speechSynthesis.speak(msg);
-        window._alienSaidHi = true;
-      }
-    }
-
-    const saved = localStorage.getItem("theme") || "dark";
-    setTheme(saved);
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
   </script>
+
 </body>
 </html>
