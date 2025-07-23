@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maheswar Galaxy – Reels</title>
+  <link rel="stylesheet" href="core.css" />
+  <link rel="stylesheet" href="certificate.css" />
+</head>
+<body>
+
+  <!-- 🌌 Alien Sky -->
+  <div class="moon"></div>
+  <div class="star" style="top: 20px; left: 10vw;"></div>
+  <div class="star" style="top: 80px; left: 50vw;"></div>
+  <div class="star" style="top: 150px; left: 30vw;"></div>
+  <div class="star" style="top: 200px; left: 70vw;"></div>
+  <div class="star" style="top: 300px; left: 40vw;"></div>
+  <div class="nebula"></div>
+  <img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" class="rocket" />
+  <img src="https://em-content.zobj.net/source/apple/391/satellite_1f6f0-fe0f.png" class="satellite" />
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+
+  <!-- 🌠 Navbar -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="patents.html">Patents</a>
+      <a href="#education">Education</a>
+      <a href="daily.html">Daily Updates</a>
+      <a href="contact.html">Contact Me</a>
+      <a href="posts.html">Posts</a>
+      <a href="exam.html">Exam</a>
+    </div>
+    <button class="toggle-mode" onclick="cycleTheme()">🌗</button>
+  </nav>
+
+  <h2 class="reels-heading">Maheswar Certificates</h2>
+
+  <!-- 📸 ROM-Wise Gallery -->
+  <div class="reels-frame">
+    <div class="reels-grid">
+
+      <!-- 📦 ROM 1 -->
+      <div class="rom-group">
+        <div class="reel-item">
+          <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1749648480/Photo4.jpg"
+               alt="ROM 1 – Boot Passed" onclick="openFull(this.src)" />
+          <p class="photo-title">ROM 1 – Boot Passed</p>
+        </div>
+        <div class="reel-item">
+          <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1749648480/Photo4.jpg"
+               alt="ROM 1 – Recovery" onclick="openFull(this.src)" />
+          <p class="photo-title">ROM 1 – Recovery</p>
+        </div>
+        <div class="reel-item">
+          <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1749648480/Photo4.jpg"
+               alt="ROM 1 – Fastboot" onclick="openFull(this.src)" />
+          <p class="photo-title">ROM 1 – Fastboot</p>
+        </div>
+        <div class="reel-item">
+          <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1749648480/Photo4.jpg"
+               alt="ROM 1 – UI Check" onclick="openFull(this.src)" />
+          <p class="photo-title">ROM 1 – UI Check</p>
+        </div>
+      </div>
+
+      <!-- 📦 ROM 2 -->
+      <div class="rom-group">
+        <div class="reel-item">
+          <img src="your-rom2-photo1.jpg" alt="ROM 2 – Boot Passed" onclick="openFull(this.src)" />
+          <p class="photo-title">ROM 2 – Boot Passed</p>
+        </div>
+        <div class="reel-item">
+          <img src="your-rom2-photo2.jpg" alt="ROM 2 – Recovery" onclick="openFull(this.src)" />
+          <p class="photo-title">ROM 2 – Recovery</p>
+        </div>
+        <div class="reel-item">
+          <img src="your-rom2-photo3.jpg" alt="ROM 2 – Fastboot" onclick="openFull(this.src)" />
+          <p class="photo-title">ROM 2 – Fastboot</p>
+        </div>
+        <div class="reel-item">
+          <img src="your-rom2-photo4.jpg" alt="ROM 2 – UI Check" onclick="openFull(this.src)" />
+          <p class="photo-title">ROM 2 – UI Check</p>
+        </div>
+      </div>
+
+      <!-- Add more rom-group blocks as needed -->
+
+    </div>
+  </div>
+
+  <!-- 🔍 Fullscreen Viewer -->
+  <div id="fullOverlay">
+    <img id="fullImage" src="" alt="Full View" />
+    <div id="closeOverlay" onclick="closeFull()">✖</div>
+  </div>
+
+  <!-- 🧠 Scripts -->
+  <script src="reels.js"></script>
+  <script>
+    const body = document.body;
+    function setTheme(mode) {
+      body.classList.remove("light", "animated");
+      if (mode === "light") {
+        body.classList.add("light");
+      } else if (mode === "animated") {
+        body.classList.add("animated");
+        playAlienWelcome();
+      }
+      localStorage.setItem("theme", mode);
+    }
+
+    function cycleTheme() {
+      const current = body.classList.contains("light")
+        ? "light"
+        : body.classList.contains("animated")
+        ? "animated"
+        : "dark";
+      const next = current === "dark" ? "light" : current === "light" ? "animated" : "dark";
+      setTheme(next);
+    }
+
+    function playAlienWelcome() {
+      if ('speechSynthesis' in window && !window._alienSaidHi) {
+        const msg = new SpeechSynthesisUtterance("");
+        msg.pitch = 1.1;
+        msg.rate = 0.93;
+        msg.lang = 'en-US';
+        window.speechSynthesis.speak(msg);
+        window._alienSaidHi = true;
+      }
+    }
+
+    const saved = localStorage.getItem("theme") || "dark";
+    setTheme(saved);
+
+    function openFull(src) {
+      document.getElementById("fullImage").src = src;
+      document.getElementById("fullOverlay").style.display = "flex";
+    }
+
+    function closeFull() {
+      document.getElementById("fullOverlay").style.display = "none";
+    }
+  </script>
+</body>
+</html>
