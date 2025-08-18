@@ -6,6 +6,112 @@
   <title>Projects – Maheswar Reddy</title>
   <link rel="stylesheet" href="core.css" />
   <link rel="stylesheet" href="projects.css" />
+  <style>
+    .header h1 {
+      text-align: center;
+      font-size: 2.3rem;
+      color: var(--highlight);
+      margin-bottom: 2rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1080px;
+      margin: auto;
+      padding: 1rem;
+    }
+
+    .card {
+      perspective: 1000px;
+    }
+
+    .flip-card {
+      width: 100%;
+      height: 360px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.7s ease;
+    }
+
+    .card:hover .flip-card {
+      transform: rotateY(180deg);
+    }
+
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      background: var(--card-bg);
+      color: var(--text-color);
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      backface-visibility: hidden;
+      backdrop-filter: var(--blur);
+    }
+
+    .front h3 {
+      color: var(--highlight);
+      margin-bottom: 1rem;
+    }
+
+    .front p {
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .back {
+      transform: rotateY(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .back-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .back-content img {
+      width: 90%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.3);
+    }
+
+    .btn-group {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.6rem 1.2rem;
+      background-color: var(--highlight);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ff6f61;
+    }
+
+    @media (max-width: 768px) {
+      .flip-card {
+        height: 380px;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Cosmic FX -->
@@ -26,10 +132,8 @@
       <a href="daily.html">Daily Updates</a>
       <a href="contact.html">Contact Me</a>
       <a href="posts.html">Posts</a>
-      <a href="reels.html">reels</a>
-      <a href="exam.html">Exam</a>
-
-
+      <a href="reels.html">Reels</a>
+      <a href="lang_selection.html">Exam</a>
     </div>
     <button class="toggle" onclick="cycleTheme()">🌗</button>
   </nav>
@@ -49,7 +153,13 @@
           <p><strong>Status:</strong> Active (Updating)</p>
         </div>
         <div class="back">
-          <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1749625832/Fire%20Detect.png" alt="Fire Detect" />
+          <div class="back-content">
+            <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1749625832/Fire%20Detect.png" alt="Fire Detect" />
+            <div class="btn-group">
+              <a href="https://github.com/dtaoOfficial/Fire-Detection-Application" class="btn">Code</a>
+              <a href="demo.html" class="btn">Demo</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -64,7 +174,14 @@
           <p><strong>Status:</strong> Active (Complete)</p>
         </div>
         <div class="back">
-          <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1749625834/Advance%20Vote.png" alt="Advance Vote" />
+          <div class="back-content">
+            <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1749625834/Advance%20Vote.png" alt="Advance Vote" />
+            <div class="btn-group">
+              <a href="https://github.com/dtaoOfficial/Advance-Voting-System" class="btn">Code</a>
+              <a href="demo.html" class="btn">Demo</a>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -79,21 +196,28 @@
           <p><strong>Status:</strong> Active (Complete)</p>
         </div>
         <div class="back">
-          <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1749625831/LMS.png" alt="LMS System" />
+          <div class="back-content">
+            <img src="https://res.cloudinary.com/duhki4wze/image/upload/v1749625831/LMS.png" alt="LMS System" />
+            <div class="btn-group">
+              <a href="https://github.com/dtaoOfficial/LMS-PROJECT" class="btn">Code</a>
+              <a href="demo.html" class="btn">Demo</a>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-<img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" class="rocket" alt="Rocket" />
-<img src="https://em-content.zobj.net/source/apple/391/satellite_1f6f0-fe0f.png" class="satellite" alt="Satellite" />
-<div class="shooting-star"></div>
-<div class="nebula"></div>
-<img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" class="rocket" alt="Rocket" />
-<img src="https://em-content.zobj.net/source/apple/391/satellite_1f6f0-fe0f.png" class="satellite" alt="Satellite" />
-<div class="shooting-star"></div>
-<div class="shooting-star"></div>
-<div class="shooting-star"></div>
-<div class="shooting-star"></div>
+
+  <!-- Cosmic Decor -->
+  <img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" class="rocket" alt="Rocket" />
+  <img src="https://em-content.zobj.net/source/apple/391/satellite_1f6f0-fe0f.png" class="satellite" alt="Satellite" />
+  <div class="shooting-star"></div>
+  <div class="nebula"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
 
   <script>
     const body = document.body;
@@ -109,15 +233,16 @@
     function cycleTheme() {
       const current = body.classList.contains("light")
         ? "light"
-        : body.classList.contains("animated")
+              : body.classList.contains("animated")
         ? "animated"
         : "dark";
       const next = current === "dark" ? "light" : current === "light" ? "animated" : "dark";
       setTheme(next);
     }
+
     function playAlienWelcome() {
       if ('speechSynthesis' in window && !window._alienSaidHi) {
-        const msg = new SpeechSynthesisUtterance("");
+        const msg = new SpeechSynthesisUtterance("Welcome to Maheswar Galaxy. Alien Mode Activated.");
         msg.pitch = 1.1;
         msg.rate = 0.95;
         msg.lang = 'en-US';
@@ -125,6 +250,7 @@
         window._alienSaidHi = true;
       }
     }
+
     const saved = localStorage.getItem("theme") || "dark";
     setTheme(saved);
   </script>

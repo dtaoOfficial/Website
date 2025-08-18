@@ -1,0 +1,49 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 40px;
+}
+
+#languageLabel {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: var(--highlight);
+}
+
+.level-buttons button {
+  background-color: var(--highlight);
+  border: none;
+  color: black;
+  padding: 12px 24px;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--highlight);
+  transition: transform 0.3s ease;
+}
+
+.level-buttons button:hover {
+  transform: scale(1.05);
+}
+
+/* 🏠 Floating Home Button */
+.home-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--highlight);
+  color: black;
+  font-size: 22px;
+  padding: 12px 16px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 12px var(--highlight);
+  transition: transform 0.3s ease;
+}
+
+.home-button:hover {
+  transform: scale(1.15);
+}

@@ -1,0 +1,154 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 2rem;
+  transition: background 0.6s ease, color 0.5s ease;
+}
+
+/* Heading */
+h1.reels-heading {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 12px var(--highlight);
+  color: var(--highlight);
+}
+
+/* Input box for name */
+#userName {
+  padding: 12px;
+  width: 60%;
+  max-width: 400px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: var(--card-bg);
+  color: var(--text-color);
+  box-shadow: 0 0 6px var(--highlight);
+}
+
+/* Buttons */
+.toggle {
+  background-color: var(--highlight);
+  border: none;
+  color: black;
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 8px var(--highlight);
+  transition: transform 0.3s ease;
+}
+
+.toggle:hover {
+  transform: scale(1.05);
+  background-color: #00ddb2;
+}
+
+/* Question section */
+#questionText {
+  font-size: 22px;
+  margin: 1.5rem 0;
+  color: var(--highlight);
+  text-shadow: 0 0 6px var(--highlight);
+}
+
+#questionIndex {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--highlight);
+}
+
+/* Answer options */
+#optionsContainer button {
+  display: block;
+  margin: 0.7rem auto;
+  background-color: var(--card-bg);
+  border: none;
+  color: var(--text-color);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(255,255,255,0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#optionsContainer button:hover {
+  background-color: var(--highlight);
+  color: black;
+  transform: scale(1.05);
+}
+
+/* End Exam animation box */
+.finished-animate {
+  animation: popUp 0.6s ease-out;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  color: var(--text-color);
+  box-shadow: 0 0 20px var(--highlight);
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Floating Home Button */
+.home-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--highlight);
+  color: black;
+  font-size: 22px;
+  padding: 12px 16px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 12px var(--highlight);
+  transition: transform 0.3s ease;
+  z-index: 99;
+}
+
+.home-button:hover {
+  transform: scale(1.15);
+}
+#questionText {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 12px;
+  color: var(--text-color);
+  font-size: 1.05rem;
+  box-shadow: 0 0 12px var(--highlight);
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* 🧑‍💻 Code block */
+code {
+  display: block;
+  white-space: pre-wrap;
+  background-color: rgba(255,255,255,0.04);
+  color: var(--text-color);
+  font-family: 'Courier New', monospace;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 8px var(--highlight);
+}
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Language Selection</title>
+  <link rel="stylesheet" href="core.css" />
+  <link rel="stylesheet" href="lang_selection.css" />
+</head>
+<body class="animated">
+  <!-- 🌠 Alien Sky Elements -->
+  <div class="moon"></div>
+  <div class="star" style="top: 20px; left: 10vw;"></div>
+  <div class="star" style="top: 80px; left: 50vw;"></div>
+  <div class="star" style="top: 150px; left: 30vw;"></div>
+  <div class="star" style="top: 200px; left: 70vw;"></div>
+  <div class="star" style="top: 300px; left: 40vw;"></div>
+  <div class="nebula"></div>
+  <img src="https://em-content.zobj.net/source/apple/391/rocket_1f680.png" class="rocket" />
+  <img src="https://em-content.zobj.net/source/apple/391/satellite_1f6f0-fe0f.png" class="satellite" />
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+
+  <!-- 🌌 Navbar -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="patents.html">Patents</a>
+      <a href="#education">Education</a>
+      <a href="daily.html">Daily Updates</a>
+      <a href="contact.html">Contact Me</a>
+      <a href="posts.html">Posts</a>
+    </div>
+    <button class="toggle-mode" onclick="cycleTheme()">🌗</button>
+  </nav>
+
+  <!-- 🧪 Main Section -->
+  <h1>🧪 DTAO Quiz Portal</h1>
+  <p>Select your language to explore MCQ tests and debugging challenges:</p>
+
+  <div class="language-buttons">
+    <button onclick="selectLanguage('python')">Python</button>
+    <button onclick="selectLanguage('java')">Java</button>
+    <button onclick="selectLanguage('html')">HTML</button>
+    <!--<button onclick="selectLanguage('mongodb')">MongoDb</button>
+    <button onclick="selectLanguage('my_sql')">My Sql</button>
+    <button onclick="selectLanguage('springboot')">Java Springboot</button>
+    <button onclick="selectLanguage('hibernate')">Hibernate</button>
+  -->
+
+  </div>
+
+  <script>
+  function selectLanguage(lang) {
+    localStorage.setItem("selectedLanguage", lang);
+    window.location.href = "level.html";
+  }
+
+  function cycleTheme() {
+  const body = document.body;
+
+  // Determine next theme
+  let nextTheme = "light";
+  if (body.classList.contains("light")) {
+    nextTheme = "dark";
+  } else if (body.classList.contains("dark")) {
+    nextTheme = "animated";
+  } else if (body.classList.contains("animated")) {
+    nextTheme = "light";
+  }
+
+  // Clear existing theme classes
+  body.classList.remove("light", "dark", "animated");
+  body.classList.add(nextTheme);
+
+  // Save to localStorage
+  localStorage.setItem("selectedTheme", nextTheme);
+}
+
+  // Apply stored theme mode
+const savedTheme = localStorage.getItem("selectedTheme") || "light";
+document.body.classList.add(savedTheme);
+
+</script>
+</body>
+</html>

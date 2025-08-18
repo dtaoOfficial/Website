@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feature Upgrade – Maheswar Galaxy</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at center, #0f0f2f, #000);
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #00ffe7;
+      text-shadow: 0 0 20px #00ffe7;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #ccc;
+      animation: floatText 3s infinite ease-in-out;
+    }
+
+    .emoji {
+      font-size: 3rem;
+      animation: floatEmoji 4s infinite ease-in-out;
+      margin-top: 1.5rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes floatText {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes floatEmoji {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    .back-btn {
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #00ffe7;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 12px #00ffe7;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #00cfc0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1> Feature Under Upgrade</h1>
+    <p>We’re sorry, this demo isn’t available right now.<br>We’re upgrading it for a better experience.<br>Thanks for your patience </p>
+    <div class="emoji"></div>
+    <a href="projects.html" class="back-btn">← Back to Projects</a>
+  </div>
+</body>
+</html>
