@@ -79,7 +79,7 @@
   <li><img src="https://img.icons8.com/color/48/spring-logo.png" alt="Spring Boot" /><strong>Frameworks:</strong> Spring Boot, Django</li>
   <li><img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-mongodb-a-cross-platform-document-oriented-database-program-logo-color-tal-revivo.png" alt="MongoDB" /><strong>Databases:</strong> MongoDB, MySQL</li>
   <li><img src="https://img.icons8.com/fluency/48/project.png" alt="Projects" /><strong>Projects:</strong> 5 Done, 6th (AI Chatbot) In Progress</li>
-  <li><img src="https://img.icons8.com/fluency/48/source-code.png" alt="IDE" /><strong>Software:</strong> VS Code, IntelliJ, PyCharm, MS Office, VMware</li>
+  <li><img src="https://img.icons8.com/fluency/48/source-code.png" alt="IDE" /><strong>Software:</strong> Oracle APEX, VS Code, IntelliJ, PyCharm, MS Office, VMware</li>
   <li><img src="https://img.icons8.com/color/48/windows-10.png" alt="OS" /><strong>OS:</strong> Windows, Ubuntu, Kali Linux</li>
   <li><img src="https://img.icons8.com/color/48/certificate.png" alt="Patent" /><strong>Achievements:</strong> 9 Patents (4 Licensed)</li>
   <li><img src="https://img.icons8.com/fluency/48/anonymous-mask.png" alt="Ethical Hacking" /><strong>Ethical Hacking:</strong> Phone, Laptop PenTesting, DoS Wi-Fi</li>
@@ -127,13 +127,10 @@
       <div class="glass-card">
         <h2>Announcement</h2>
         <p>
-  Hey Friends, Upcoming Website Updates! <a style="color: rgb(83, 241, 83);" href="lang_selection.html"><b>Exam</b></a>
-  <b style="color: brown;">Date: 18/08/2025</b>
-  <br><br>
   What’s New & Updated:<br>
-  1) <b style="color: green;">Exam Page Update</b> – Now Live <br>
-  2) <b style="color: blue;">Projects Page</b> – Added <b>Demo</b> & <b>Code</b> buttons <br>
-  3) <b style="color: orange;">Bug Fixes</b> – Some issues resolved for smoother experience <br>
+  1) <b>Exam Page Update</b> – Now Live <br>
+  2) <b>Projects Page</b> – Added <b>Demo</b> & <b>Code</b> buttons <br>
+  3) <b>Bug Fixes</b> – Some issues resolved for smoother experience <br>
   <br>
   Stay tuned, more exciting features are on the way 
 </p>
@@ -141,12 +138,18 @@
       </div>
     </div>
   </div>
+  <!-- Floating Update Card -->
+<div id="update-card" class="floating-card">
+  <h3>Upcoming Update : </h3>
+  <p>1) Adding <strong>MongoDB Exam</strong> feature soon!</p>
+</div>
+
 
   <!-- Toggle -->
 
   <!-- Footer -->
   <footer class="last-update">
-    Last Update: 19/08/2025 , 09:50 pM <span id="update-date"></span>
+    Last Update: 20/08/2025 , 09:10 pM <span id="update-date"></span>
   </footer>
 
   <!-- Theme Script -->
@@ -188,6 +191,30 @@
 
     const saved = localStorage.getItem("theme") || "dark";
     setTheme(saved);
+    // Drag logic for floating card
+const card = document.getElementById("update-card");
+let isDragging = false, offsetX = 0, offsetY = 0;
+
+card.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  offsetX = e.clientX - card.offsetLeft;
+  offsetY = e.clientY - card.offsetTop;
+  card.style.transition = "none";
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (isDragging) {
+    card.style.left = `${e.clientX - offsetX}px`;
+    card.style.top = `${e.clientY - offsetY}px`;
+  }
+});
+
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+  card.style.transition = "all 0.2s ease";
+});
+
   </script>
+  
 </body>
 </html>

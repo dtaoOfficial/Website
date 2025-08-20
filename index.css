@@ -190,3 +190,27 @@ ul {
   font-weight: 700;
   font-size: 24px;
 }
+.floating-card {
+  position: fixed;
+  top: 100px;
+  left: 50px;
+  width: 220px;
+  background: rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid #92e363;
+  border-radius: 10px;
+  padding: 15px;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 0 0 10px #89e26d;
+  cursor: move;
+  z-index: 9999;
+}
+.floating-card h3 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #a8e2d6;
+}
+.floating-card p {
+  font-size: 14px;
+}
