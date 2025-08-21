@@ -26,6 +26,8 @@
   <!-- Announcement -->
   <div class="announcement">🛸 Welcome to <strong>Alien Mode</strong> — Maheswar Activated 💫</div>
 
+  
+
   <!-- Navigation -->
   <nav class="navbar">
   <div class="nav-links">
@@ -136,6 +138,23 @@
 </p>
 
       </div>
+
+
+
+      <div class="progress-wrapper">
+  <h3 class="progress-title">React Learning</h3>
+  <div class="progress-container">
+    <svg class="progress-ring" width="120" height="120">
+      <circle class="ring-bg" cx="60" cy="60" r="50" />
+      <circle class="ring-fill" cx="60" cy="60" r="50" />
+    </svg>
+    <div class="progress-label" id="progressLabel">0%</div>
+  </div>
+</div>
+
+
+
+
     </div>
   </div>
   <!-- Floating Update Card -->
@@ -149,7 +168,7 @@
 
   <!-- Footer -->
   <footer class="last-update">
-    Last Update: 20/08/2025 , 09:10 pM <span id="update-date"></span>
+    Last Update: 21/08/2025 , 07:00 pM <span id="update-date"></span>
   </footer>
 
   <!-- Theme Script -->
@@ -213,6 +232,23 @@ document.addEventListener("mouseup", () => {
   isDragging = false;
   card.style.transition = "all 0.2s ease";
 });
+
+// Progress Bar
+
+function updateProgress(percent) {
+  const circle = document.querySelector('.ring-fill');
+  const label = document.getElementById('progressLabel');
+  const radius = 50;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (percent / 100) * circumference;
+
+  circle.style.strokeDashoffset = offset;
+  label.textContent = `${percent}%`;
+}
+
+// Example usage
+updateProgress(0); // Initial
+setTimeout(() => updateProgress(0), 2000); // Simulate update
 
   </script>
   
